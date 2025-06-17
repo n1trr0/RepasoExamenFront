@@ -1,0 +1,10 @@
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button.xd{
+    padding: 0.8rem 4rem;
+}   

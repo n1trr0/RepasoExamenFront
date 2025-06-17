@@ -1,0 +1,96 @@
+@import url(/header.css);
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body{
+  background-color: #f0f0f0;
+  height: 100vh;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li{
+  list-style: none;
+}
+
+*{
+  text-decoration: none;
+  color: black;
+}
+
+.login-container{
+  background-color: white;
+  width: 100%;
+  border-radius: 10px;
+  max-width: 400px;
+  padding: 2rem;
+  margin: auto;
+  margin-top: calc(100vh - 75vh);
+}
+
+input {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333333;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 0.8rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+select{
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333333;
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
