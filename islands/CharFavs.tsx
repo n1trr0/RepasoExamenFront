@@ -40,9 +40,7 @@ export default function CharsFavs ({favorites}:data) {
 
     return (
         <div>
-        {favorites.length === 0 ? (
-            <h2>No hay favoritos</h2>
-        ) : (
+        {favorites.length === 0 ? (<h2>No hay favoritos</h2>) : (
             <ul>
             {chars.map((char) => (
                 <li key={char.id}>
