@@ -35,14 +35,15 @@ li{
   color: black;
 }
 
-.login-container{
+
+.loginContainer {
+  margin: auto;
+  margin-top: 150px;
   background-color: white;
-  width: 100%;
-  border-radius: 10px;
+  width: 100%;      
   max-width: 400px;
   padding: 2rem;
-  margin: auto;
-  margin-top: calc(100vh - 75vh);
+  border-radius: 10px;
 }
 
 input {
@@ -93,4 +94,43 @@ select{
 select:focus {
   border-color: #007bff;
   outline: none;
+}
+
+.chars{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px
+}
+
+.charCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 300px;
+
+  h4,p{
+    text-align: center;
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+  a{
+    height: inherit;
+  }
+}
+
+.charsSelect{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }

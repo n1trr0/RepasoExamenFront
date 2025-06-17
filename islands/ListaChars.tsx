@@ -37,16 +37,18 @@ export default function ListaChars({charsOriginal, cookieHouse}:data) {
     }, [name, house]);
 
     return(
-        <>
-            <input type='text' placeholder='Search' value={name} onInput={(e)=>{setName(e.currentTarget.value.toLocaleLowerCase())}} />
-            <select value={house} onChange={(e)=>{setHouse(e.currentTarget.value)}}>
-                <option value="">All</option>
-                <option value="Gryffindor">Gryffindor</option>
-                <option value="Slytherin">Slytherin</option>
-                <option value="Ravenclaw">Ravenclaw</option>
-                <option value="Hufflepuff">Hufflepuff</option>
-            </select>
-            {chars.map((e)=> (<li key={e.id}><MostrarChars char={e} /></li>))}
+        <>  
+            <div class='charsSelect'>
+                <input type='text' placeholder='Search' value={name} onInput={(e)=>{setName(e.currentTarget.value.toLocaleLowerCase())}} />
+                <select value={house} onChange={(e)=>{setHouse(e.currentTarget.value)}}>
+                    <option value="">All</option>
+                    <option value="Gryffindor">Gryffindor</option>
+                    <option value="Slytherin">Slytherin</option>
+                    <option value="Ravenclaw">Ravenclaw</option>
+                    <option value="Hufflepuff">Hufflepuff</option>
+                </select>
+            </div>
+            <div class='chars'>{chars.map((e)=> (<li key={e.id}><MostrarChars char={e} /></li>))}</div>
         </>
     )
 }

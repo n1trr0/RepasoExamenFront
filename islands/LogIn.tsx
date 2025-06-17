@@ -12,7 +12,7 @@ export default function LogIn () {
     }
 
     return(
-        <div class='login-container'>
+        <div class='loginContainer'>
             <form onSubmit={(e)=> handleSubmit(e)}>
                 <input type='text' placeholder='Username' required/>
                 <input type='password' placeholder='Password' value={password} 

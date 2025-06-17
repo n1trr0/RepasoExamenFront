@@ -14,7 +14,6 @@ export default function CharsFavs ({favorites}:data) {
         const cookie = document.cookie
         if(cookie && cookie.includes('favs=')){
             const favs = cookie.split('favs=')[1].split(';')[0]
-            console.log(favs.split(','))
             return favs.split(',')
         }else return []
     }

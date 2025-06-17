@@ -32,20 +32,16 @@ export default function CharsDetallado ({char}:data) {
         favs.push(char.id)
         const expires = expiresNextYear()
         document.cookie = `favs=${favs.join(',')};path=/;expires=${expires}`
-        console.log(favs)
     };
     const handleRemoveFav = () => {
         setFav(false)
         const favs = getFavsCookie()
         const newFavs = favs.filter(id => id !== char.id.toString());
         if(newFavs.length === 0){
-            const expires = deleteCookie()
-            document.cookie = `favs=${newFavs.join(',')};path=/;expires=${expires}`
+            document.cookie = `favs=${newFavs.join(',')};path=/;expires=${deleteCookie()}`
             return
         }
-        const expires = expiresNextYear()
-        document.cookie = `favs=${newFavs.join(',')};path=/;expires=${expires}`
-        console.log(newFavs)
+        document.cookie = `favs=${newFavs.join(',')};path=/;expires=${expiresNextYear()}`
     }
     useEffect(()=>{
         const favs = getFavsCookie();
